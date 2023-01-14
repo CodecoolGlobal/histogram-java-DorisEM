@@ -43,6 +43,7 @@ public class Histogram {
         for (int i = 0; i < amount; i++) {
             ranges.add(new Range(i * step + 1, i * step + step));
         }
+        System.out.println(ranges + " Quissu lu mia"); // CANCELLA
         return ranges;
     }
 
