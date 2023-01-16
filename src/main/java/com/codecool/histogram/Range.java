@@ -33,7 +33,7 @@ public class Range {
     }
 
     public String toString() {
-        return String.format("%-2d - %-2d", from, to);
+        return String.format("%-1d - %-1d", from, to);
     }
 
     @Override
