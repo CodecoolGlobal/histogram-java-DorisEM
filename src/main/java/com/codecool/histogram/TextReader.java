@@ -10,7 +10,6 @@ public class TextReader {
 
     /**
      * Constructs a TextReader with a specified file.
-     * @param fileName name of the file to read
      */
     public TextReader(String fileName) {
         this.fileName = fileName;
@@ -18,8 +17,6 @@ public class TextReader {
 
     /**
      * Returns the text content of the file specified in constructor.
-     * @return text content of previously specified file
-     * @throws IOException in case of non-existing file
      */
     public String read() throws IOException {
         StringBuilder resultBuilder = new StringBuilder();
