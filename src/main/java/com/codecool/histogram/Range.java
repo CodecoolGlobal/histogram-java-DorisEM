@@ -10,9 +10,6 @@ public class Range {
 
     /**
      * Constructs a Range with specified lower and upper limit.
-     * Lower and upper limits cannot be smaller than 0.
-     * @param from lower limit
-     * @param to upper limit
      */
     public Range(int from, int to) {
         if (from < 0 || to < from) {
@@ -25,8 +22,6 @@ public class Range {
 
     /**
      * Returns that the given word belongs to the particular range or not.
-     * @param word text to investigate
-     * @return The word belongs to the particular range or not.
      */
     public boolean isInRange(String word) {
         return word.length() >= from && word.length() <= to;
