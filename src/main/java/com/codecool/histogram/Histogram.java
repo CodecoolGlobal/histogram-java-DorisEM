@@ -14,10 +14,7 @@ public class Histogram {
     }
 
     /**
-     * Get the already generated histogram
-     * @return Histogram as a Map<Range, Integer>
-     *     where the key is the range
-     *     and the value is the count of words in the given range
+     * Get the already generated histogram 
      */
     public Map<Range, Integer> getHistogram() {
         return histogram;
@@ -25,9 +22,6 @@ public class Histogram {
 
     /**
      * Generate x amount of step width ranges.
-     * @param step Required range width
-     * @param amount Required amount of ranges
-     * @return List of ranges
      */
     public List<Range> generateRanges(int step, int amount) {
         if (step < 0) {
@@ -48,9 +42,6 @@ public class Histogram {
 
     /**
      * Calculates the distribution of words in a given text based on provided ranges.
-     * @param text Text to analyze.
-     * @param ranges Words' length distribution ranges
-     * @return Counts of words in given ranges
      */
     public Map<Range, Integer> generate(String text, List<Range> ranges) {
         if (text == null || ranges == null) {
@@ -74,23 +65,10 @@ public class Histogram {
         }
         return histogram;
     }
-
-    /**
-     * Normalize the values for better understanding.
-     * For every feature, the minimum value of that feature gets transformed into a 0,
-     * the maximum value gets transformed into a 100,
-     * and every other value gets transformed into a int between 0 and 100.
-     * The following formula applied to every ranges:
-     *      `V' = (V - min) * 100 / (max - min)`
-     */
-    public void normalizeValues() {
-        // TODO: Implement normalization method
-    }
+    
 
     /**
      * Returns with the string representation of the generated histogram
-     * where every range is in separate line and the bars represented as asterisks.
-     * @return String representation of histogram
      */
     public String toString() {
         StringBuilder resultBuilder = new StringBuilder();
